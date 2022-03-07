@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "tsc",
+    "nodemon": "nodemon",
     "start:dev": "ts-node -r tsconfig-paths/register src/app/server.ts",
+    "build": "tsc",
     "start:prod": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/src/app/server.js"
   },
   "repository": {
@@ -29,6 +30,7 @@
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "ts-node": "^10.6.0",
     "tsconfig-paths": "^3.12.0",
