@@ -7,11 +7,13 @@
     "test:verbose": "jest --passWithNoTests --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit-config.ts",
     "test:integration": "npm test -- --watch -c jest-integration-config.ts",
+    "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
     "nodemon": "nodemon",
     "start:dev": "ts-node -r tsconfig-paths/register src/app/server.ts",
     "build": "rimraf dist && tsc",
-    "start:prod": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/src/app/server.js"
+    "start:prod": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/src/app/server.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -37,7 +39,9 @@
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.0",
     "jest": "^27.5.1",
+    "lint-staged": "^12.3.5",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
