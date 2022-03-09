@@ -24,6 +24,8 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-unresolved': 'error',
     'no-console': 'off',
+    'no-unused-vars': 0,
+    '@typescript-eslint/no-unused-vars': 0,
     'import/order': [
       'error',
       {
