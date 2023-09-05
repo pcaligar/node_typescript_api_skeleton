@@ -1,9 +1,9 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-  coverageDirectory: 'coverage',
-  collectCoverageFrom: ['src/**/*.ts', '!src/app/server.ts'],
+  preset: "ts-jest",
+  testEnvironment: "node",
+  coverageDirectory: "coverage",
+  collectCoverageFrom: ["src/**/*.ts", "!src/app/server.ts"],
   coverageThreshold: {
     global: {
       branches: 0,
@@ -13,8 +13,8 @@ module.exports = {
     },
   },
   moduleNameMapper: {
-    'src/(.*)': '<rootDir>/src/$1',
+    "src/(.*)": "<rootDir>/src/$1",
   },
-  moduleDirectories: ['node_modules', 'src'],
-  testPathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/node_modules/'],
+  moduleDirectories: ["node_modules", "src"],
+  testPathIgnorePatterns: ["<rootDir>/dist/", "<rootDir>/node_modules/"],
 };
