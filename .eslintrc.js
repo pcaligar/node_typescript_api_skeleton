@@ -6,13 +6,21 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     // ecmaVersion: 12,
     // sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "prettier", "import", "simple-import-sort", "unused-imports", "folders", "hexagonal-architecture"],
+  plugins: [
+    "@typescript-eslint",
+    "import",
+    "simple-import-sort",
+    "unused-imports",
+    "folders",
+    "hexagonal-architecture",
+  ],
   rules: {
     //error prevention
     "array-callback-return": ["error", { checkForEach: true }],
@@ -53,7 +61,13 @@ module.exports = {
       },
     ],
     "folders/match-regex": ["error", "^[a-z-]+$", "/js/"],
-    "@typescript-eslint/no-non-null-assertion": "off"
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
   },
   overrides: [
     {
@@ -78,11 +92,7 @@ module.exports = {
     },
     "import/resolver": {
       typescript: {
-        alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
-
-        // Choose from one of the "project" configs below or omit to use <root>/tsconfig.json by default
-
-        // use <root>/path/to/folder/tsconfig.json
+        alwaysTryTypes: true,
         project: "./tsconfig.json",
       },
     },
