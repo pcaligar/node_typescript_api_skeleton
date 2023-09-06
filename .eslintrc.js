@@ -85,6 +85,10 @@ module.exports = {
         "hexagonal-architecture/enforce": ["error"],
       },
     },
+    {
+      files: ["tests/**/*.spec.ts", "tests/**/*.test.ts"],
+      extends: ["plugin:jest/recommended", "plugin:jest/style"],
+    },
   ],
   settings: {
     "import/parsers": {
