@@ -1,10 +1,8 @@
-import { Request, Response, Router } from "express";
+import { Router } from "express";
 
-import StatusGetController from "../../../modules/state/infrastructure/controllers/StatusGetController";
+import makeStatusGetController from "../../dependency-Injection/state/makeStatusGetController";
+import syncAdapterRoute from "../adapters/syncAdapterRoute";
 
 export default (router: Router): void => {
-  const controller = new StatusGetController();
-  router.get("/status", (req: Request, res: Response) =>
-    controller.run(req, res),
-  );
+  router.get("/status", syncAdapterRoute(makeStatusGetController()));
 };
