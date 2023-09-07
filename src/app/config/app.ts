@@ -1,10 +1,12 @@
 import express from "express";
 
-import setupMiddlewares from "./setupMiddlewares";
+import bodyParser from "./middleware/bodyParser";
+import setupMiddleware from "./setupMiddleware";
 import setupRoutes from "./setupRoutes";
 
 const app = express();
-setupMiddlewares(app);
+app.use(bodyParser);
 setupRoutes(app);
+setupMiddleware(app);
 
 export default app;
