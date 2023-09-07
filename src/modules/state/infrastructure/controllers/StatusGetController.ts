@@ -1,9 +1,13 @@
-import { Request, Response } from "express";
+import { ControllerSync } from "../../../shared/infrastructure/controllers/ControllerSync";
+import { HttpResponse } from "../../../shared/infrastructure/controllers/HttpResponse";
 
-import { ControllerSync } from "./ControllerSync";
+export class StatusGetController implements ControllerSync<null> {
+  constructor() {}
 
-export default class StatusGetController implements ControllerSync {
-  run(req: Request, res: Response): void {
-    res.status(200).send();
+  public run(): HttpResponse {
+    return {
+      statusCode: 200,
+      body: null,
+    };
   }
 }
