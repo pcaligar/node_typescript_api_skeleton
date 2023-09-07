@@ -10,7 +10,7 @@
     "start:dev": "ts-node -r tsconfig-paths/register src/app/server.ts",
     "start:prod": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/src/app/server.js",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
-    "test:ci": "npm test -- --coverage",
+    "test:co": "npm test -- --coverage",
     "test:clear": "jest --clearCache",
     "test:integration": "npm test -- -c jest-integration-config.ts",
     "test:integration-w": "npm test -- --watch -c jest-integration-config.ts",
