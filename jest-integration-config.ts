@@ -1,4 +1,4 @@
-import config = require("./jest.config");
+import config from "./jest.config";
 
 config.testMatch = ["**/*.test.ts"];
 
