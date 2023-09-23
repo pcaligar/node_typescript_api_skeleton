@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
-. "$(dirname "$0")/_/validate-commit-msg.sh"
-. "$(dirname "$0")/_/execute-test-in-stage-area.sh"
+. "$(dirname "$0")/_/_validate-commit-msg.sh"
+. "$(dirname "$0")/_/_execute-test-in-stage-area.sh"
